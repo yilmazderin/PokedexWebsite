@@ -1,13 +1,108 @@
 ul {
     display:flex; 
-    flex-wrap: wrap
+    flex-wrap: wrap;
 }
 
 li {
     list-style: none
 }
-
-.name {
+.title{
     text-align: center;
+    color: rgb(177, 34, 34);
 
+}
+.topnav{
+    text-align: center;
+}
+
+.num {
+    position: relative;
+    left: 20px;
+}
+.name {
+    position: relative;
+    left: 20px;
+
+}
+
+.img {
+    border: 2px solid #555;
+}
+.grass {
+    background-color: green;
+    color: white;
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    float: left;
+    position: relative;
+    left: 20px;
+
+}
+.fire {
+    background-color: red;
+    color: black;
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    float: left;
+    position: relative;
+    left: 20px;
+}
+.water {
+    background-color: blue;
+    color: white;
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    float: left;
+    position: relative;
+    left: 20px;
+}
+.bug {
+    background-color: lightgreen;
+    color: white;
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    float: left;
+    position: relative;
+    left: 20px;
+}
+.flying {
+    background-color: lightblue;
+    color: white;
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    float: left;
+    position: relative;
+    left: 20px;
+}
+.poison {
+    background-color: purple;
+    color: white;
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    float: left;
+    position: relative;
+    left: 20px;
+}
+.normal {
+    background-color: grey;
+    color: white;
+    padding-top: 5px;
+    padding-right: 8px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    float: left;
+    position: relative;
+    left: 20px;
 }
