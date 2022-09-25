@@ -14,9 +14,9 @@
             <h1>Derin's Pokedex</h1>
         </div>
         <div class="topnav">
-            <input type="search" placeholder="Search by Number" value="" id="number-search">
+            <input type="search" placeholder="Search by Number" value="" id="number-search", onkeypress="onEnterPressed(event,id)">
             <button type ="Submit", id ="name-submit", onclick="searchPokemonNumber();"></button>
-            <input type="text" placeholder="Search by Name" id="name-search">
+            <input type="text" placeholder="Search by Name" id="name-search", onkeypress="onEnterPressed(event,id)">
             <button type ="Submit", id ="name-submit", onclick="searchPokemonName();"></button>
         </div>
 
@@ -206,12 +206,6 @@
 
     </main>
     <footer>
-
     </footer>
-    
-<!-- Place your content here -->
-
-
-<!-- Embedded JavaScript go here -->
 </body>
 </html>

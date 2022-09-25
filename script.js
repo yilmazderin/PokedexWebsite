@@ -62,3 +62,15 @@ function showAlert(values){
     }
     alert(list);
 }
+
+function onEnterPressed (e,id) {
+    var enterPressed = e.keyCode || e.which;
+    if(e.keyCode == 13) {
+        if (id == "number-search") {
+            searchPokemonNumber();
+        }
+        if(id== "name-search") {
+            searchPokemonName();
+        }
+    }
+}
