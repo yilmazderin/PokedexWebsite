@@ -38,6 +38,11 @@ li {
 .img {
     border: 2px solid #555;
 }
+
+button {
+    width: 30px;
+    height: 20px;
+}
 .grass {
     background-color: green;
     color: white;

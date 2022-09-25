@@ -24,16 +24,16 @@ var pokemon = [
 function searchPokemonName() {
     var value = document.getElementById('name-search').value;
     var values = [];
-    inputLower=input.toLowerCase();
+    inputLower=value.toLowerCase();
 
     for (let i=0; i<pokemon.length; i++){
-        pokemonChosen = pokemon[i],Name.toLowerCase();
+        pokemonChosen = pokemon[i].Name.toLowerCase();
         if(pokemonChosen.includes(value.toLowerCase())){
             values.push(pokemon[i]);
         }
     }
 
-    showAlert(results);
+    showAlert(values);
 
 }
 
