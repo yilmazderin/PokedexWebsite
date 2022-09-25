@@ -37,6 +37,24 @@ function searchPokemonName() {
 
 }
 
+function searchPokemonNumber() {
+    var value = document.getElementById('number-search').value;
+    if(value>20){
+        alert("Invalid Number. Choose a number between 1 and 20.")
+    }else {
+        var values = [];
+
+        for (let i=0; i<pokemon.length; i++){
+        pokemonChosen = pokemon[i].Number;
+        if(pokemonChosen.includes(value)){
+            values.push(pokemon[i]);
+             }
+         }
+    }
+
+    showAlert(values);
+}
+
 function showAlert(values){
     var list = "";
     for (let i=0; i<values.length; i++){
