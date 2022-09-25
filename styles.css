@@ -1,10 +1,19 @@
+body {
+    background-color: lightgrey;
+    font-family: "Courier New", monospace;
+}
+
 ul {
     display:flex; 
     flex-wrap: wrap;
 }
 
 li {
-    list-style: none
+    list-style: none;
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-top: 1em;
+
 }
 .title{
     text-align: center;
@@ -17,11 +26,12 @@ li {
 
 .num {
     position: relative;
-    left: 20px;
+    left: 50px;
 }
 .name {
     position: relative;
-    left: 20px;
+    left: 50px;
+    font-weight: bold;
 
 }
 
@@ -37,11 +47,11 @@ li {
     padding-left: 8px;
     float: left;
     position: relative;
-    left: 20px;
+    left: 50px;
 
 }
 .fire {
-    background-color: red;
+    background-color: rgb(219, 68, 8);
     color: black;
     padding-top: 5px;
     padding-right: 8px;
@@ -49,7 +59,7 @@ li {
     padding-left: 8px;
     float: left;
     position: relative;
-    left: 20px;
+    left: 50px;
 }
 .water {
     background-color: blue;
@@ -60,29 +70,29 @@ li {
     padding-left: 8px;
     float: left;
     position: relative;
-    left: 20px;
+    left: 50px;
 }
 .bug {
     background-color: lightgreen;
-    color: white;
+    color: black;
     padding-top: 5px;
     padding-right: 8px;
     padding-bottom: 5px;
     padding-left: 8px;
     float: left;
     position: relative;
-    left: 20px;
+    left: 50px;
 }
 .flying {
     background-color: lightblue;
-    color: white;
+    color: black;
     padding-top: 5px;
     padding-right: 8px;
     padding-bottom: 5px;
     padding-left: 8px;
     float: left;
     position: relative;
-    left: 20px;
+    left: 50px;
 }
 .poison {
     background-color: purple;
@@ -93,7 +103,7 @@ li {
     padding-left: 8px;
     float: left;
     position: relative;
-    left: 20px;
+    left: 50px;
 }
 .normal {
     background-color: grey;
@@ -104,5 +114,10 @@ li {
     padding-left: 8px;
     float: left;
     position: relative;
-    left: 20px;
+    left: 50px;
 }
+
+.img:hover {
+    transform: scale(1.02);
+}
+
