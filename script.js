@@ -25,7 +25,7 @@ var pokemonName = document.getElementById("name-search")
 var pokemonNum = document.getElementById("number-search")
 
 function clearList(){
-    var checkDiv = document.getElementById("dynamic2")
+    var checkDiv = document.getElementById("rslts")
     if(checkDiv){
         checkDiv.remove()
     }
@@ -34,14 +34,14 @@ function clearList(){
 function checkNum(){
 
     if(pokemonNum.value == ""){
-        var checkDiv = document.getElementById("dynamic2")
+        var checkDiv = document.getElementById("rslts")
         checkDiv.remove()
     }
 }
 function checkName(){
 
     if(pokemonName.value == ""){
-        var checkDiv = document.getElementById("dynamic2")
+        var checkDiv = document.getElementById("rslts")
         checkDiv.remove()
     }
 }
@@ -51,8 +51,8 @@ function searchDynName(){
     clearList()
 
     var divNameTag = document.createElement("div")
-    divNameTag.setAttribute("class","dynamic")
-    divNameTag.setAttribute("id", "dynamic2")
+    divNameTag.setAttribute("class","results")
+    divNameTag.setAttribute("id", "rslts")
     var listTag = document.createElement("ul")
     divNameTag.appendChild(listTag)
 
@@ -69,7 +69,7 @@ function searchDynName(){
 
        
         var pokEl = document.createElement("li")
-        pokEl.setAttribute("class","dynamic")
+        pokEl.setAttribute("class","results")
         listTag.appendChild(pokEl)
        
         var pokDiv = document.createElement("div")
@@ -83,7 +83,6 @@ function searchDynName(){
  
         var br = document.createElement("br")
         var br1 = document.createElement("br")
-        var br2 = document.createElement("br")
 
         pokDiv.append("Id: " + pokemon[i].Number)
         pokDiv.append(br)
@@ -100,22 +99,22 @@ function searchDynNum(){
     clearList()
     
     var divNameTag = document.createElement("div")
-    divNameTag.setAttribute("class","dynamic")
-    divNameTag.setAttribute("id" , "dynamic2")
+    divNameTag.setAttribute("class","results")
+    divNameTag.setAttribute("id" , "rslts")
     var listTag = document.createElement("ul")
     divNameTag.appendChild(listTag)
     
     var firstDynDiv = document.getElementById("pokemon-list")
     document.body.insertBefore(divNameTag, firstDynDiv)
-    
-    valueNum = String(pokemonNum.value)
-    
+
+    var valueNum = Number(pokemonNum.value)
+    alert("h")
     
     if (valueNum < 21 && valueNum > 0) {
         
         
         var pokEl = document.createElement("li")
-        pokEl.setAttribute("class","dynamic")
+        pokEl.setAttribute("class","results")
         listTag.appendChild(pokEl)
        
         var pokDiv = document.createElement("div")
