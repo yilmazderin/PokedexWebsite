@@ -119,5 +119,46 @@ function searchDynName(){
         pokDiv.append(br2)
         }
     }
-
 }
+
+function searchDynNum(){
+    var divNameTag = document.createElement("div")
+    divNameTag.setAttribute("class","div-dynamic")
+    divNameTag.setAttribute("id", "div-dynamic2")
+    var listTag = document.createElement("ul")
+    divNameTag.appendChild(listTag)
+
+    var firstDynDiv = document.getElementById("pokemon-list")
+    document.body.insertBefore(divNameTag, firstDynDiv)
+
+    valueNum = String (pokNum.value)
+
+    
+    if (valueNum < 21 && valueNum > 0) {
+
+       
+        var pokEl = document.createElement("li")
+        pokEl.setAttribute("class","dynamic")
+        unorderedListTag.appendChild(pokEl)
+       
+        var pokDiv = document.createElement("div")
+        pokEl.appendChild(pokDiv)
+      
+        var pokPic = document.createElement("img")
+        var pokImgSrc = "pokemons/" + String(valueNum) + ".jpg"
+        pokemonDiv.append(pokPic)
+        pokImgSrc.src = pokImgSrc
+
+ 
+        var br = document.createElement("br")
+        var br1 = document.createElement("br")
+        var br2 = document.createElement("br")
+
+        pokDiv.append("Id: " + pokList[i].Number)
+        pokDiv.append(br)
+        pokDiv.append("Name: " + pokList[i].Name)
+        pokDiv.append(br1)
+        pokDiv.append("Type: " + pokList[i].Type)
+        pokDiv.append(br2)
+        }
+    }
