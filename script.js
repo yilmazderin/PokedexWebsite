@@ -24,6 +24,28 @@ var pokemon = [
 var pokemonName = document.getElementById("name-search")
 var pokemonNum = document.getElementById("number-search")
 
+function clearList(){
+    var checkDiv = document.getElementById("dynamic2")
+    if(checkDiv){
+        checkDiv.remove()
+    }
+} 
+
+function checkNum(){
+
+    if(pokemonNum.value == ""){
+        var checkDiv = document.getElementById("dynamic2")
+        checkDiv.remove()
+    }
+}
+function checkName(){
+
+    if(pokemonName.value == ""){
+        var checkDiv = document.getElementById("dynamic2")
+        checkDiv.remove()
+    }
+}
+
 function searchDynName(){
 
     clearList()
@@ -68,31 +90,30 @@ function searchDynName(){
         pokDiv.append("Name: " + pokemon[i].Name)
         pokDiv.append(br1)
         pokDiv.append("Type: " + pokemon[i].Type)
-        pokDiv.append(br2)
         }
     }
-    checkNameValue
+    checkName()
 }
 
 function searchDynNum(){
 
     clearList()
-
+    
     var divNameTag = document.createElement("div")
     divNameTag.setAttribute("class","dynamic")
-    divNameTag.setAttribute("Number" , "dynamic2")
+    divNameTag.setAttribute("id" , "dynamic2")
     var listTag = document.createElement("ul")
     divNameTag.appendChild(listTag)
-
+    
     var firstDynDiv = document.getElementById("pokemon-list")
     document.body.insertBefore(divNameTag, firstDynDiv)
-
-    valueNum = String (pokemonNum.value)
-
+    
+    valueNum = String(pokemonNum.value)
+    
     
     if (valueNum < 21 && valueNum > 0) {
-
-       
+        
+        
         var pokEl = document.createElement("li")
         pokEl.setAttribute("class","dynamic")
         listTag.appendChild(pokEl)
@@ -110,35 +131,13 @@ function searchDynNum(){
         var br1 = document.createElement("br")
         var br2 = document.createElement("br")
 
-        pokDiv.append("Id: " + pokemon[i].Number)
+        pokDiv.append("Id: " + pokemon[valueNum].Number)
         pokDiv.append(br)
-        pokDiv.append("Name: " + pokemon[i].Name)
+        pokDiv.append("Name: " + pokemon[valueNum].Name)
         pokDiv.append(br1)
-        pokDiv.append("Type: " + pokemon[i].Type)
+        pokDiv.append("Type: " + pokemon[valueNum].Type)
         pokDiv.append(br2)
         }
 
-        checkNumValue()
-    }
-
-    function clearList(){
-        var checkDiv = document.getElementById("dynamic2")
-        if(checkDiv){
-            checkDiv.remove()
-        }
-    } 
-
-    function checkNumValue(){
-
-        if(pokemonNum.value == ""){
-            var checkDiv = document.getElementById("dynamic2")
-            checkDiv.remove()
-        }
-    }
-    function checkNameValue(){
-
-        if(pokemonName.value == ""){
-            var checkDiv = document.getElementById("dynamic2")
-            checkDiv.remove()
-        }
+        checkNum()
     }
