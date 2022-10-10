@@ -75,6 +75,9 @@ function onEnterPressed (e,id) {
     }
 }
 
+var pokemonName = document.getElementById("name-search")
+var pokemonNum = document.getElementById("number-search")
+
 function searchDynName(){
     var divNameTag = document.createElement("div")
     divNameTag.setAttribute("class","div-dynamic")
@@ -85,7 +88,7 @@ function searchDynName(){
     var firstDynDiv = document.getElementById("pokemon-list")
     document.body.insertBefore(divNameTag, firstDynDiv)
 
-    valueName = String (value.value)
+    valueName = String(pokemonName.value)
 
     
     for (let i = 0; i < pokList.length; i++) {
@@ -123,15 +126,15 @@ function searchDynName(){
 
 function searchDynNum(){
     var divNameTag = document.createElement("div")
-    divNameTag.setAttribute("class","div-dynamic")
-    divNameTag.setAttribute("id", "div-dynamic2")
+    divNameTag.setAttribute("class","dynamic")
+    divNameTag.setAttribute(Number , "dynamic2")
     var listTag = document.createElement("ul")
     divNameTag.appendChild(listTag)
 
     var firstDynDiv = document.getElementById("pokemon-list")
     document.body.insertBefore(divNameTag, firstDynDiv)
 
-    valueNum = String (pokNum.value)
+    valueNum = String (pokemonNum.value)
 
     
     if (valueNum < 21 && valueNum > 0) {
@@ -162,3 +165,10 @@ function searchDynNum(){
         pokDiv.append(br2)
         }
     }
+
+    function clearList(){
+        var checkDiv = document.getElementById("div-dynamic2")
+        if(checkDiv){
+            checkDiv.remove()
+        }
+    } 
