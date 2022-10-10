@@ -74,3 +74,15 @@ function onEnterPressed (e,id) {
         }
     }
 }
+
+function searchDynName(){
+    var divNameTag = document.createElement("div")
+    divNameTag.setAttribute("class","div-dynamic")
+    divNameTag.setAttribute("class", "div-dynamic2")
+    var listTag = document.createElement("ul")
+    divNameTag.appendChild(listTag)
+
+    var firstDynDiv = document.getElementById("pokemon-list")
+    document.body.insertBefore(divNameTag, firstDynDiv)
+    
+}
