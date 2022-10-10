@@ -22,45 +22,45 @@ var pokemon = [
 ]
 
 function searchPokemonName() {
-    var value = document.getElementById('name-search').value;
-    var values = [];
-    inputLower=value.toLowerCase();
+    var pokName = document.getElementById('name-search').value;
+    var pokList = [];
+    inputLower=pokName.toLowerCase();
 
     for (let i=0; i<pokemon.length; i++){
         pokemonChosen = pokemon[i].Name.toLowerCase();
-        if(pokemonChosen.includes(value.toLowerCase())){
-            values.push(pokemon[i]);
+        if(pokemonChosen.includes(pokName.toLowerCase())){
+            pokList.push(pokemon[i]);
         }
     }
 
-    showAlert(values);
+    showAlert(pokList);
 
 }
 
 function searchPokemonNumber() {
-    var value = document.getElementById('number-search').value;
-    if(value>20){
+    var pokNum = document.getElementById('number-search').value;
+    if(pokNum>20){
         alert("Invalid Number. Choose a number between 1 and 20.")
     }else {
-        var values = [];
+        var pokList = [];
 
         for (let i=0; i<pokemon.length; i++){
         pokemonChosen = pokemon[i].Number;
-        if(pokemonChosen.includes(value)){
-            values.push(pokemon[i]);
+        if(pokemonChosen.includes(pokNum)){
+            pokList.push(pokemon[i]);
              }
          }
     }
 
-    showAlert(values);
+    showAlert(pokList);
 }
 
-function showAlert(values){
-    var list = "";
+function showAlert(pokList){
+    var pokList = "";
     for (let i=0; i<values.length; i++){
-        list  += "Name: " + values[i].Name + "\nNumber: " + values[i].Number + "\nType(s): "+ values[i].Type + "\n\n";
+        pokList  += "Name: " + values[i].Name + "\nNumber: " + values[i].Number + "\nType(s): "+ values[i].Type + "\n\n";
     }
-    alert(list);
+    alert(pokList);
 }
 
 function onEnterPressed (e,id) {
@@ -84,5 +84,40 @@ function searchDynName(){
 
     var firstDynDiv = document.getElementById("pokemon-list")
     document.body.insertBefore(divNameTag, firstDynDiv)
+
+    valueName = String (value.value)
+
     
+    for (let i = 0; i < pokList.length; i++) {
+
+  
+        if ((pokList[i].name.toLowerCase().includes(nameValue) && nameValue != "") || (pokList[i].name.includes(nameValue)&& nameValue!= "")) {
+
+       
+        var pokEl = document.createElement("li")
+        pokEl.setAttribute("class","dynamic")
+        unorderedListTag.appendChild(pokEl)
+       
+        var pokDiv = document.createElement("div")
+        pokEl.appendChild(pokDiv)
+      
+        var pokPic = document.createElement("img")
+        var pokImgSrc = "pokemons/" + i + ".jpg"
+        pokemonDiv.append(pokPic)
+        pokImgSrc.src = pokImgSrc
+
+ 
+        var br = document.createElement("br")
+        var br1 = document.createElement("br")
+        var br2 = document.createElement("br")
+
+        pokDiv.append("Id: " + pokList[i].Number)
+        pokDiv.append(br)
+        pokDiv.append("Name: " + pokList[i].Name)
+        pokDiv.append(br1)
+        pokDiv.append("Type: " + pokList[i].Type)
+        pokDiv.append(br2)
+        }
+    }
+
 }
