@@ -126,3 +126,7 @@ button {
     transform: scale(1.02);
 }
 
+.dynamic {
+    height: 300px;
+    width: 200px;
+}

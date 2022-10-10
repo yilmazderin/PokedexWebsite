@@ -1,33 +1,36 @@
 var pokemon = [
-    {Name: "Bulbasaur", Number: "1", Type: "Grass/Poison"},
-    {Name: "Ivysaur", Number: "2", Type: "Grass/Poison"},
-    {Name: "Venusaur", Number: "3", Type: "Grass/Poison"},
-    {Name: "Charmander", Number: "4", Type: "Fire"},
-    {Name: "Charmeleon", Number: "5", Type: "Fire"},
-    {Name: "Charizard", Number: "6", Type: "Fire/Flying"},
-    {Name: "Squirtle", Number: "7", Type: "Water"},
-    {Name: "Wartortle", Number: "8", Type: "Water"},
-    {Name: "Blastoise", Number: "9", Type: "Water"},
-    {Name: "Caterpie", Number: "10", Type: "Bug"},
-    {Name: "Metapod", Number: "11", Type: "Bug"},
-    {Name: "Butterfree", Number: "12", Type: "Bug/Flying"},
-    {Name: "Weedle", Number: "13", Type: "Bug/Poison"},
-    {Name: "Kakuna", Number: "14", Type: "Bug/Poison"},
-    {Name: "Beedrill", Number: "15", Type: "Bug/Poison"},
-    {Name: "Pidgey", Number: "16", Type: "Normal/Flying"},
-    {Name: "Pidgeotto", Number: "17", Type: "Normal/Flying"},
-    {Name: "Pidgeot", Number: "18", Type: "Normal/Flying"},
-    {Name: "Rattata", Number: "19", Type: "Normal"},
-    {Name: "Raticate", Number: "20", Type: "Normal"},
+    {"Name": "Bulbasaur", "Number": "1", "Type": "Grass/Poison"},
+    {"Name": "Ivysaur", "Number": "2", "Type": "Grass/Poison"},
+    {"Name": "Venusaur", "Number": "3", "Type": "Grass/Poison"},
+    {"Name": "Charmander", "Number": "4", "Type": "Fire"},
+    {"Name": "Charmeleon", "Number": "5", "Type": "Fire"},
+    {"Name": "Charizard", "Number": "6", "Type": "Fire/Flying"},
+    {"Name": "Squirtle", "Number": "7", "Type": "Water"},
+    {"Name": "Wartortle", "Number": "8", "Type": "Water"},
+    {"Name": "Blastoise", "Number": "9", "Type": "Water"},
+    {"Name": "Caterpie", "Number": "10", "Type": "Bug"},
+    {"Name": "Metapod", "Number": "11", "Type": "Bug"},
+    {"Name": "Butterfree", "Number": "12", "Type": "Bug/Flying"},
+    {"Name": "Weedle", "Number": "13", "Type": "Bug/Poison"},
+    {"Name": "Kakuna", "Number": "14", "Type": "Bug/Poison"},
+    {"Name": "Beedrill", "Number": "15", "Type": "Bug/Poison"},
+    {"Name": "Pidgey", "Number": "16", "Type": "Normal/Flying"},
+    {"Name": "Pidgeotto", "Number": "17", "Type": "Normal/Flying"},
+    {"Name": "Pidgeot", "Number": "18", "Type": "Normal/Flying"},
+    {"Name": "Rattata", "Number": "19", "Type": "Normal"},
+    {"Name": "Raticate", "Number": "20", "Type": "Normal"},
 ]
 
 var pokemonName = document.getElementById("name-search")
 var pokemonNum = document.getElementById("number-search")
 
 function searchDynName(){
+
+    clearList()
+
     var divNameTag = document.createElement("div")
-    divNameTag.setAttribute("class","div-dynamic")
-    divNameTag.setAttribute("class", "div-dynamic2")
+    divNameTag.setAttribute("class","dynamic")
+    divNameTag.setAttribute("id", "dynamic2")
     var listTag = document.createElement("ul")
     divNameTag.appendChild(listTag)
 
@@ -40,7 +43,7 @@ function searchDynName(){
     for (let i = 0; i < pokemon.length; i++) {
 
   
-        if ((pokemon[i].name.toLowerCase().includes(nameValue) && nameValue != "") || (pokemon[i].name.includes(nameValue)&& nameValue!= "")) {
+        if ((pokemon[i].Name.toLowerCase().includes(valueName) && valueName != "") || (pokemon[i].Name.includes(valueName)&& valueName!= "")) {
 
        
         var pokEl = document.createElement("li")
@@ -68,12 +71,16 @@ function searchDynName(){
         pokDiv.append(br2)
         }
     }
+    checkNameValue
 }
 
 function searchDynNum(){
+
+    clearList()
+
     var divNameTag = document.createElement("div")
     divNameTag.setAttribute("class","dynamic")
-    divNameTag.setAttribute(Number , "dynamic2")
+    divNameTag.setAttribute("Number" , "dynamic2")
     var listTag = document.createElement("ul")
     divNameTag.appendChild(listTag)
 
@@ -124,6 +131,13 @@ function searchDynNum(){
     function checkNumValue(){
 
         if(pokemonNum.value == ""){
+            var checkDiv = document.getElementById("dynamic2")
+            checkDiv.remove()
+        }
+    }
+    function checkNameValue(){
+
+        if(pokemonName.value == ""){
             var checkDiv = document.getElementById("dynamic2")
             checkDiv.remove()
         }
