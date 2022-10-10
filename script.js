@@ -21,60 +21,6 @@ var pokemon = [
     {Name: "Raticate", Number: "20", Type: "Normal"},
 ]
 
-function searchPokemonName() {
-    var pokName = document.getElementById('name-search').value;
-    var pokList = [];
-    inputLower=pokName.toLowerCase();
-
-    for (let i=0; i<pokemon.length; i++){
-        pokemonChosen = pokemon[i].Name.toLowerCase();
-        if(pokemonChosen.includes(pokName.toLowerCase())){
-            pokList.push(pokemon[i]);
-        }
-    }
-
-    showAlert(pokList);
-
-}
-
-function searchPokemonNumber() {
-    var pokNum = document.getElementById('number-search').value;
-    if(pokNum>20){
-        alert("Invalid Number. Choose a number between 1 and 20.")
-    }else {
-        var pokList = [];
-
-        for (let i=0; i<pokemon.length; i++){
-        pokemonChosen = pokemon[i].Number;
-        if(pokemonChosen.includes(pokNum)){
-            pokList.push(pokemon[i]);
-             }
-         }
-    }
-
-    showAlert(pokList);
-}
-
-function showAlert(pokList){
-    var pokList = "";
-    for (let i=0; i<values.length; i++){
-        pokList  += "Name: " + values[i].Name + "\nNumber: " + values[i].Number + "\nType(s): "+ values[i].Type + "\n\n";
-    }
-    alert(pokList);
-}
-
-function onEnterPressed (e,id) {
-    var enterPressed = e.keyCode || e.which;
-    if(e.keyCode == 13) {
-        if (id == "number-search") {
-            searchPokemonNumber();
-        }
-        if(id== "name-search") {
-            searchPokemonName();
-        }
-    }
-}
-
 var pokemonName = document.getElementById("name-search")
 var pokemonNum = document.getElementById("number-search")
 
@@ -91,10 +37,10 @@ function searchDynName(){
     valueName = String(pokemonName.value)
 
     
-    for (let i = 0; i < pokList.length; i++) {
+    for (let i = 0; i < pokemon.length; i++) {
 
   
-        if ((pokList[i].name.toLowerCase().includes(nameValue) && nameValue != "") || (pokList[i].name.includes(nameValue)&& nameValue!= "")) {
+        if ((pokemon[i].name.toLowerCase().includes(nameValue) && nameValue != "") || (pokemon[i].name.includes(nameValue)&& nameValue!= "")) {
 
        
         var pokEl = document.createElement("li")
@@ -114,11 +60,11 @@ function searchDynName(){
         var br1 = document.createElement("br")
         var br2 = document.createElement("br")
 
-        pokDiv.append("Id: " + pokList[i].Number)
+        pokDiv.append("Id: " + pokemon[i].Number)
         pokDiv.append(br)
-        pokDiv.append("Name: " + pokList[i].Name)
+        pokDiv.append("Name: " + pokemon[i].Name)
         pokDiv.append(br1)
-        pokDiv.append("Type: " + pokList[i].Type)
+        pokDiv.append("Type: " + pokemon[i].Type)
         pokDiv.append(br2)
         }
     }
@@ -157,11 +103,11 @@ function searchDynNum(){
         var br1 = document.createElement("br")
         var br2 = document.createElement("br")
 
-        pokDiv.append("Id: " + pokList[i].Number)
+        pokDiv.append("Id: " + pokemon[i].Number)
         pokDiv.append(br)
-        pokDiv.append("Name: " + pokList[i].Name)
+        pokDiv.append("Name: " + pokemon[i].Name)
         pokDiv.append(br1)
-        pokDiv.append("Type: " + pokList[i].Type)
+        pokDiv.append("Type: " + pokemon[i].Type)
         pokDiv.append(br2)
         }
     }
