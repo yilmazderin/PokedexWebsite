@@ -110,11 +110,21 @@ function searchDynNum(){
         pokDiv.append("Type: " + pokemon[i].Type)
         pokDiv.append(br2)
         }
+
+        checkNumValue()
     }
 
     function clearList(){
-        var checkDiv = document.getElementById("div-dynamic2")
+        var checkDiv = document.getElementById("dynamic2")
         if(checkDiv){
             checkDiv.remove()
         }
     } 
+
+    function checkNumValue(){
+
+        if(pokemonNum.value == ""){
+            var checkDiv = document.getElementById("dynamic2")
+            checkDiv.remove()
+        }
+    }
