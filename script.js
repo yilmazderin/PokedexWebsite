@@ -48,14 +48,14 @@ function searchDynName(){
        
         var pokEl = document.createElement("li")
         pokEl.setAttribute("class","dynamic")
-        unorderedListTag.appendChild(pokEl)
+        listTag.appendChild(pokEl)
        
         var pokDiv = document.createElement("div")
         pokEl.appendChild(pokDiv)
       
         var pokPic = document.createElement("img")
         var pokImgSrc = "pokemons/" + i + ".jpg"
-        pokemonDiv.append(pokPic)
+        pokDiv.append(pokPic)
         pokImgSrc.src = pokImgSrc
 
  
@@ -95,14 +95,14 @@ function searchDynNum(){
        
         var pokEl = document.createElement("li")
         pokEl.setAttribute("class","dynamic")
-        unorderedListTag.appendChild(pokEl)
+        listTag.appendChild(pokEl)
        
         var pokDiv = document.createElement("div")
         pokEl.appendChild(pokDiv)
       
         var pokPic = document.createElement("img")
         var pokImgSrc = "pokemons/" + String(valueNum) + ".jpg"
-        pokemonDiv.append(pokPic)
+        pokDiv.append(pokPic)
         pokImgSrc.src = pokImgSrc
 
  
