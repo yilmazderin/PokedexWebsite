@@ -6,208 +6,200 @@
 <meta name="descripion" content="">
 <meta name="author" content="">
 <link rel="stylesheet" href="styles.css">
-<script src="script.js"></script>
 </head>
 <body>
-    <header>
-        <div class="title">
-            <h1>Derin's Pokedex</h1>
-        </div>
-        <div class="topnav">
-            <input type="search" placeholder="Search by Number" value="" id="number-search", onkeypress="onEnterPressed(event,id)">
-            <button type ="Submit", id ="name-submit", onclick="searchPokemonNumber();">Submit</button>
-            <input type="text" placeholder="Search by Name" id="name-search", onkeypress="onEnterPressed(event,id)">
-            <button type ="Submit", id ="name-submit", onclick="searchPokemonName();">Submit</button>
-        </div>
 
+    <div class="title">
+        <h1>Derin's Pokedex</h1>
+    </div>
+    <div class="topnav">
+        <form>
+        <input type="text" placeholder="Search by Number" id="number-search" onkeyup="searchDynNum()">
+        </form>
+        <form>
+        <input type="text" placeholder="Search by Name" id="name-search" onkeyup="searchDynName()">
+        </form>
+    </div>
 
-    </header>
-    <main>
-        <ul class="pokemon-list">
-            <li>
-                <div class="1">
-                    <div class="img"><img src="pokemons/1.jpg" id=1/></div>
-                    <div class="num">#001</div>
-                    <div class="name">Bulbasaur</div>
-                    <div class="grass">Grass</div>
-                    <div class="poison">Poison</div>
-                </div>
-            </li>
-            <li>
-                <div class="2">
-                    <div class="img"><img src="pokemons/2.jpg" id=2/></div>
-                    <div class="num">#002</div>
-                    <div class="name">Ivysaur</div>
-                    <div class="grass">Grass</div>
-                    <div class="poison">Poison</div>
-                </div>
-            </li>
-            <li>
-                <div class="3">
-                    <div class="img"><img src="pokemons/3.jpg" id=3/></div>
-                    <div class="num">#003</div>
-                    <div class="name">Venusaur</div>
-                    <div class="grass">Grass</div>
-                    <div class="poison">Poison</div>
-                </div>
-            </li>
-            <li>
-                <div class="4">
-                    <div class="img"><img src="pokemons/4.jpg" id=4/></div>
-              
-                    </div>
-                    <div class="num">#004</div>
-                    <div class="name">Charmander</div>
-                    <div class="fire">Fire</div>
-                </div>
-            </li>
-            <li>
-                <div class="5">
-                    <div class="img"><img src="pokemons/5.jpg" id=5/></div>
-                    <div class="num">#005</div>
-                    <div class="name">Charmeleon</div>
-                    <div class="fire">Fire</div>
-                </div>
-            </li>
-            <li>
-                <div class="6">
-                    <div class="img"><img src="pokemons/6.jpg" id=6/></div>
-                
-                    </div>
-                    <div class="num">#006</div>
-                    <div class="name">Charizard</div>
-                    <div class="fire">Fire</div>
-                    <div class="flying">Flying</div>
-                </div>
-            </li>
-            <li>
-                <div class="7">
-                    <div class="img"><img src="pokemons/7.jpg" id=7/></div>
-                
-                    </div>
-                    <div class="num">#007</div>
-                    <div class="name">Squirtle</div>
-                    <div class="water">Water</div>
-                </div>
-            </li>
-            <li>
-                <div class="8">
-                    <div class="img"><img src="pokemons/8.jpg" id=8/></div>
-                    <div class="num">#008</div>
-                    <div class="name">Wartortle</div>
-                    <div class="water">Water</div>
-                </div>
-            </li>
-            <li>
-                <div class="9">
-                    <div class="img"><img src="pokemons/9.jpg" id=9/></div>
-                    <div class="num">#009</div>
-                    <div class="name">Blastoise</div>
-                    <div class="water">Water</div>
-                </div>
-            </li>
-            <li>
-                <div class="10">
-                    <div class="img"><img src="pokemons/10.jpg" id=10/></div>
-                    <div class="num">#010</div>
-                    <div class="name">Caterpie</div>
-                    <div class="bug">Bug</div>
-                </div>
-            </li>
-            <li>
-                <div class="11">
-                    <div class="img"><img src="pokemons/11.jpg" id=11/></div>
-                    <div class="num">#011</div>
-                    <div class="name">Metapod</div>
-                    <div class="bug">Bug</div>
-                </div>
-            </li>
-            <li>
-                <div class="12">
-                    <div class="img"><img src= "pokemons/12.jpg" id=12/></div>
-                    <div class="num">#012</div>
-                    <div class="name">Butterfree</div>
-                    <div class="bug">Bug</div>
-                    <div class="flying">Flying</div>
-                </div>
-            </li>
-            <li>
-                <div class="13">
-                    <div class="img"><img src="pokemons/13.jpg" id=13/></div>
-                    <div class="num">#013</div>
-                    <div class="name">Weedle</div>
-                    <div class="bug">Bug</div>
-                    <div class="poison">Poison</div>
-                </div>
-            </li>
-            <li>
-                <div class="14">
-                    <div class="img"><img src="pokemons/14.jpg" id=14/></div>
-                    <div class="num">#014</div>
-                    <div class="name">Kakuna</div>
-                    <div class="bug">Bug</div>
-                    <div class="poison">Poison</div>
-                </div>
-            </li>
-            <li>
-                <div class="15">
-                    <div class="img"><img src="pokemons/15.jpg" id=15/></div>
-                    <div class="num">#015</div>
-                    <div class="name">Beedrill</div>
-                    <div class="bug">Bug</div>
-                    <div class="poison">Poison</div>
-                </div>
-            </li>
-            <li>
-                <div class="16">
-                    <div class="img"><img src="pokemons/16.jpg" id=16/></div>
-                    <div class="num">#016</div>
-                    <div class="name">Pidgey</div>
-                    <div class="normal">Normal</div>
-                    <div class="flying">Flying</div>
-                </div>
-            </li>
-            <li>
-                <div class="17">
-                    <div class="img"><img src="pokemons/17.jpg" id=17/></div>
-                    <div class="num">#017</div>
-                    <div class="name">Pidgeotto</div>
-                    <div class="normal">Normal</div>
-                    <div class="flying">Flying</div>
-                </div>
-            </li>
-            <li>
-                <div class="18">
-                    <div class="img"><img src="pokemons/18.jpg" id=18/></div>
-                    <div class="num">#018</div>
-                    <div class="name">Pidgeot</div>
-                    <div class="normal">Normal</div>
-                    <div class="flying">Flying</div>
-                </div>
-            </li>
-            <li>
-                <div class="19">
-                    <div class="img"><img src="pokemons/19.jpg" id=19/></div>
-                    <div class="num">#019</div>
-                    <div class="name">Rattata</div>
-                    <div class="normal">Normal</div>
-                </div>
-            </li>
-            <li>
-                <div class="20">
-                    <div class="img"><img src="pokemons/ 20.jpg" id=20/></div>
-                    <div class="num">#020</div>
-                    <div class="name">Raticate</div>
-                    <div class="normal">Normal</div>
-                </div>
-            </li>
-        </ul>
-        
-
-    </main>
+    <div id="pokemon-list"></div>
+    <ul class="pokemon-list">
+        <li>
+            <div class="pokemonDiv">
+                <div class="img"><img src="pokemons/1.jpg" alt="Bulbasaur" id=1/></div>
+                <div class="num">#001</div>
+                <div class="name">Bulbasaur</div>
+                <div class="grass">Grass</div>
+                <div class="poison">Poison</div>
+            </div>
+        </li>
+        <li>
+            <div class="pokemonDiv">
+                <div class="img"><img src="pokemons/2.jpg" alt="Ivysaur" id=2/></div>
+                <div class="num">#002</div>
+                <div class="name">Ivysaur</div>
+                <div class="grass">Grass</div> 
+                <div class="poison">Poison</div>
+            </div>
+        </li>
+        <li>
+            <div class="pokemonDiv">
+                <div class="img"><img src="pokemons/3.jpg" alt="Venusaur" id=3/></div>
+                <div class="num">#003</div>
+                <div class="name">Venusaur</div>
+                <div class="grass">Grass</div>
+                <div class="poison">Poison</div>
+            </div>
+        </li>
+        <li>
+            <div class="pokemonDiv">
+                <div class="img"><img src="pokemons/4.jpg" alt="Charmander" id=4/></div>
+                <div class="num">#004</div>
+                <div class="name">Charmander</div>
+                <div class="fire">Fire</div>
+            </div>
+        </li>
+        <li>
+            <div class="pokemonDiv">
+                <div class="img"><img src="pokemons/5.jpg" alt="Charmeleon" id=5/></div>
+                <div class="num">#005</div>
+                <div class="name">Charmeleon</div>
+                <div class="fire">Fire</div>
+            </div>
+        </li>
+        <li>
+            <div class="pokemonDiv">
+                <div class="img"><img src="pokemons/6.jpg" alt="Charizard" id=6/></div>
+                <div class="num">#006</div>
+                <div class="name">Charizard</div>
+                <div class="fire">Fire</div>
+                <div class="flying">Flying</div>
+            </div>
+        </li>
+        <li>
+            <div class="pokemonDiv">
+                <div class="img"><img src="pokemons/7.jpg" alt="Squirtle" id=7/></div>
+                <div class="num">#007</div>
+                <div class="name">Squirtle</div>
+                <div class="water">Water</div>
+            </div>
+        </li>
+        <li>
+            <div class="pokemonDiv">
+                <div class="img"><img src="pokemons/8.jpg" alt="Wartortle" id=8/></div>
+                <div class="num">#008</div>
+                <div class="name">Wartortle</div>
+                <div class="water">Water</div>
+            </div>
+        </li>
+        <li>
+            <div class="pokemonDiv">
+                <div class="img"><img src="pokemons/9.jpg" alt="Blastoise" id=9/></div>
+                <div class="num">#009</div>
+                <div class="name">Blastoise</div>
+                <div class="water">Water</div>
+            </div>
+        </li>
+        <li>
+            <div class="pokemonDiv">
+                <div class="img"><img src="pokemons/10.jpg" alt="Caterpie" id=10/></div>
+                <div class="num">#010</div>
+                <div class="name">Caterpie</div>
+                <div class="bug">Bug</div>
+            </div>
+        </li>
+        <li>
+            <div class="pokemonDiv">
+                <div class="img"><img src="pokemons/11.jpg" alt="Metapod" id=11/></div>
+                <div class="num">#011</div>
+                <div class="name">Metapod</div>
+                <div class="bug">Bug</div>
+            </div>
+        </li>
+        <li>
+            <div class="pokemonDiv">
+                <div class="img"><img src= "pokemons/12.jpg" alt="Butterfree" id=12/></div>
+                <div class="num">#012</div>
+                <div class="name">Butterfree</div>
+                <div class="bug">Bug</div>
+                <div class="flying">Flying</div>
+            </div>
+        </li>
+        <li>
+            <div class="pokemonDiv">
+                <div class="img"><img src="pokemons/13.jpg" alt="Weedle" id=13/></div>
+                <div class="num">#013</div>
+                <div class="name">Weedle</div>
+                <div class="bug">Bug</div>
+                <div class="poison">Poison</div>
+            </div>
+        </li>
+        <li>
+            <div class="pokemonDiv">
+                <div class="img"><img src="pokemons/14.jpg" alt="Kakuna" id=14/></div>
+                <div class="num">#014</div>
+                <div class="name">Kakuna</div>
+                <div class="bug">Bug</div>
+                <div class="poison">Poison</div>
+            </div>
+        </li>
+        <li>
+            <div class="pokemonDiv">
+                <div class="img"><img src="pokemons/15.jpg" alt="Beedrill" id=15/></div>
+                <div class="num">#015</div>
+                <div class="name">Beedrill</div>
+                <div class="bug">Bug</div>
+                <div class="poison">Poison</div>
+            </div>
+        </li>
+        <li>
+            <div class="pokemonDiv">
+                <div class="img"><img src="pokemons/16.jpg" alt="Pidgey" id=16/></div>
+                <div class="num">#016</div>
+                <div class="name">Pidgey</div>
+                <div class="normal">Normal</div>
+                <div class="flying">Flying</div>
+            </div>
+        </li>
+        <li>
+            <div class="pokemonDiv">
+                <div class="img"><img src="pokemons/17.jpg" alt="Pidgeotto" id=17/></div>
+                <div class="num">#017</div>
+                <div class="name">Pidgeotto</div>
+                <div class="normal">Normal</div>
+                <div class="flying">Flying</div>
+            </div>
+        </li>
+        <li>
+            <div class="pokemonDiv">
+                <div class="img"><img src="pokemons/18.jpg" alt="Pidgeot" id=18/></div>
+                <div class="num">#018</div>
+                <div class="name">Pidgeot</div>
+                <div class="normal">Normal</div>
+                <div class="flying">Flying</div>
+            </div>
+        </li>
+        <li>
+            <div class="pokemonDiv">
+                <div class="img"><img src="pokemons/19.jpg" alt="Rattata" id=19/></div>
+                <div class="num">#019</div>
+                <div class="name">Rattata</div>
+                <div class="normal">Normal</div>
+            </div>
+        </li>
+        <li>
+            <div class="pokemonDiv">
+                <div class="img"><img src="pokemons/20.jpg" alt="Raticate" id=20/></div>
+                <div class="num">#020</div>
+                <div class="name">Raticate</div>
+                <div class="normal">Normal</div>
+            </div>
+        </li>
+    </ul>
     <footer>
         <div class = "reference1">Pokemon data set from https://www.kaggle.com/kvpratama/pokemon-images-dataset</div>
         <div class = "referemce2">Pokemon excel from https://www.reddit.com/r/TheSilphRoad/comments/7p952h/pokemon_go_pokedex_spreadsheet/</div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
