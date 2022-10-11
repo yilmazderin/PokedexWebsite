@@ -1,4 +1,5 @@
 var pokemon = [
+    {"Name": "", "Number": "", "Type": ""},
     {"Name": "Bulbasaur", "Number": "1", "Type": "Grass/Poison"},
     {"Name": "Ivysaur", "Number": "2", "Type": "Grass/Poison"},
     {"Name": "Venusaur", "Number": "3", "Type": "Grass/Poison"},
@@ -78,12 +79,14 @@ function searchDynName(){
         var pokPic = document.createElement("img")
         var pokImgSrc = "pokemons/" + i + ".jpg"
         pokDiv.append(pokPic)
-        pokImgSrc.src = pokImgSrc
+        pokPic.src = pokImgSrc
 
  
         var br = document.createElement("br")
         var br1 = document.createElement("br")
+        var br2 = document.createElement("br")
 
+        pokDiv.append(br2)
         pokDiv.append("Id: " + pokemon[i].Number)
         pokDiv.append(br)
         pokDiv.append("Name: " + pokemon[i].Name)
@@ -108,7 +111,6 @@ function searchDynNum(){
     document.body.insertBefore(divNameTag, firstDynDiv)
 
     var valueNum = Number(pokemonNum.value)
-    alert("h")
     
     if (valueNum < 21 && valueNum > 0) {
         
@@ -121,21 +123,21 @@ function searchDynNum(){
         pokEl.appendChild(pokDiv)
       
         var pokPic = document.createElement("img")
-        var pokImgSrc = "pokemons/" + String(valueNum) + ".jpg"
+        var pokImgSrc = "pokemons\\" + valueNum + ".jpg"
         pokDiv.append(pokPic)
-        pokImgSrc.src = pokImgSrc
+        pokPic.src = pokImgSrc
 
  
         var br = document.createElement("br")
         var br1 = document.createElement("br")
         var br2 = document.createElement("br")
 
+        pokDiv.append(br2)
         pokDiv.append("Id: " + pokemon[valueNum].Number)
         pokDiv.append(br)
         pokDiv.append("Name: " + pokemon[valueNum].Name)
         pokDiv.append(br1)
         pokDiv.append("Type: " + pokemon[valueNum].Type)
-        pokDiv.append(br2)
         }
 
         checkNum()
